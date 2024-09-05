@@ -24,13 +24,12 @@ int main()
 
 	LeastSquares leastSquares(points);
 
-	double a_M, b_M, r_M;
-	if (!leastSquares.calculateCenterAndRadius(a_M, b_M, r_M))
+	if (!leastSquares.isAbleToBuild())
 	{
 		return -1;
 	}
 
-	displayResults(a_M, b_M, r_M);
+	displayResults(leastSquares.a_point(), leastSquares.b_point(), leastSquares.radius());
 
 	return 0;
 }
